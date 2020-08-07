@@ -4,29 +4,19 @@
       <b-card>
         Welcome To Our Video Library, Please Log In
 
-        <b-form @submit="onSubmit">
-          <b-form-group
-            id="input-group-1"
-            label="Email address:"
-            label-for="input-1"
-          >
-            <b-form-input
-              id="input-1"
-              v-model="form.email"
-              type="email"
-              required
-              placeholder="Enter email"
-            ></b-form-input>
-          </b-form-group>
-          <b-button type="submit" variant="primary">Submit</b-button>
-        </b-form>
+        <LoginForm />
       </b-card>
     </div>
   </div>
 </template>
 
 <script>
+import LoginForm from "@/components/LoginForm.vue";
+
 export default {
+  components: {
+    LoginForm
+  },
   data() {
     return {
       form: {
