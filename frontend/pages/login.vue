@@ -4,7 +4,9 @@
       <b-card>
         <b-alert variant="danger" :show="this.error.length">{{ error }}</b-alert>
 
-        Welcome To Our Video Library, Please Log In
+        <b-card-text>
+          <h1>User Login</h1>
+        </b-card-text>
 
         <LoginForm
           v-on:failedLogin="showFailedLogin"
