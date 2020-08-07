@@ -1,5 +1,8 @@
 
 export default {
+  router: {
+    middleware: 'authenticated'
+  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
