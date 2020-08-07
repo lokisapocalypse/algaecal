@@ -8,7 +8,13 @@
     <div class="row">
       <div class="col">
         <b-list-group>
-          <b-list-group-item v-for="video in videos" v-bind:key="video.id">{{ video.title }}</b-list-group-item>
+          <b-list-group-item
+            v-for="video in videos"
+            v-bind:key="video.id"
+            :to="{ path: '/videos/' + video.id }"
+          >
+            {{ video.title }}
+          </b-list-group-item>
         </b-list-group>
       </div>
     </div>
