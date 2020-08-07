@@ -17,15 +17,8 @@ export default {
   components: {
     LoginForm
   },
-  data() {
-    return {
-      form: {
-        email: ''
-      },
-    };
-  },
   methods: {
-    onSubmit(){
+    onSubmit() {
       console.log('A form was submitted');
     },
   }
