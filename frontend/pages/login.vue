@@ -16,11 +16,6 @@ import LoginForm from "@/components/LoginForm.vue";
 export default {
   components: {
     LoginForm
-  },
-  methods: {
-    onSubmit() {
-      console.log('A form was submitted');
-    },
   }
 }
 </script>
