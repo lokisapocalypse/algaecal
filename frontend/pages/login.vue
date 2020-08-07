@@ -2,9 +2,13 @@
   <div class="container">
     <div>
       <b-card>
+        <b-alert variant="danger" :show="this.error.length">{{ error }}</b-alert>
+
         Welcome To Our Video Library, Please Log In
 
-        <LoginForm />
+        <LoginForm
+          v-on:failedLogin="showFailedLogin"
+        />
       </b-card>
     </div>
   </div>
@@ -16,6 +20,16 @@ import LoginForm from "@/components/LoginForm.vue";
 export default {
   components: {
     LoginForm
+  },
+  data() {
+    return {
+      error: ''
+    };
+  },
+  methods: {
+    showFailedLogin(username) {
+      this.error = 'Sorry, that username is not found.';
+    }
   }
 }
 </script>

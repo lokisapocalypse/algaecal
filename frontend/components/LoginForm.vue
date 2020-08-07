@@ -39,6 +39,9 @@ export default {
             this.$router.push('/videos');
           }
         });
+
+        // reaching this point indicates a failed login
+        this.$emit('failedLogin', this.form.username);
       });
     }
   }
