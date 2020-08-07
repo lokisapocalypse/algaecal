@@ -21,7 +21,6 @@ import axios from 'axios';
 export default {
   created() {
     axios.get('http://localhost:8080/videos').then(response => {
-      console.log(response.data.data);
       this.videos = response.data.data;
     });
   },
@@ -29,11 +28,6 @@ export default {
     return {
       videos: []
     };
-  },
-  methods: {
-    onSubmit(){
-      console.log('A form was submitted');
-    },
   }
 }
 </script>

@@ -87,6 +87,7 @@ class Video implements JsonSerializable
     {
         return [
             'id' => $this->id,
+            'category' => $this->category,
             'title' => $this->title,
             'description' => $this->description,
             'video_id' => $this->videoId,
