@@ -26,6 +26,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { href: '//fast.wistia.com/assets/external/E-v1.js', async: true }
     ]
   },
   /*
