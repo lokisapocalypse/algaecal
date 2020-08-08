@@ -6,8 +6,8 @@
       </b-navbar-brand>
 
       <b-navbar-nav class="ml-auto">
-        <b-nav-item to="/videos">Videos</b-nav-item>
-        <b-nav-item :to="loginLink">{{ loginText }}</b-nav-item>
+        <b-nav-item v-show="authenticated" to="/videos">Videos</b-nav-item>
+        <b-nav-item v-show="!authenticated" to="/login">Login</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
 
@@ -20,11 +20,8 @@ import { mapMutations } from 'vuex';
 
 export default {
   computed: {
-    loginLink() {
-      return '/' + (this.$store.state.auth.authenticated ? 'logout' : 'login');
-    },
-    loginText() {
-      return this.$store.state.auth.authenticated ? 'Logout' : 'Login';
+    authenticated() {
+      return this.$store.state.auth.authenticated;
     }
   }
 };
