@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid">
-        <iframe :src="videoLink" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="310" height="174"></iframe>
+        <iframe :src="videoLink" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="620" height="349"></iframe>
         <div>{{ this.video.description }}</div>
     </div>
 </template>
