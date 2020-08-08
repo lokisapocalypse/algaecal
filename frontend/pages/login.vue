@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>
+    <b-col md="6">
       <b-card>
         <b-alert variant="danger" :show="this.error.length">{{ error }}</b-alert>
 
@@ -12,7 +12,7 @@
           v-on:failedLogin="showFailedLogin"
         />
       </b-card>
-    </div>
+    </b-col>
   </div>
 </template>
 

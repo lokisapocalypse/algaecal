@@ -1,13 +1,15 @@
 <template>
-  <b-col md="8" offset-md="2">
-    <b-card>
-      <h4>Video Player</h4>
-      <iframe :src="videoLink" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="620" height="349"></iframe>
+  <div class="container">
+    <b-col md="8">
+      <b-card>
+        <h4>Video Player</h4>
+        <iframe :src="videoLink" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="620" height="349"></iframe>
 
-      <b-card-text><h5>{{ this.video.title }}</h5></b-card-text>
-      <b-card-text>{{ this.video.description }}</b-card-text>
-    </b-card>
-  </b-col>
+        <b-card-text><h5>{{ this.video.title }}</h5></b-card-text>
+        <b-card-text>{{ this.video.description }}</b-card-text>
+      </b-card>
+    </b-col>
+  </div>
 </template>
 
 <script>
