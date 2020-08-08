@@ -6,25 +6,28 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
-        <b-list-group>
-          <b-list-group-item
+
+          <VideoSummary
             v-for="video in videos"
             v-bind:key="video.id"
-            :to="{ path: '/videos/' + video.id }"
-          >
-            {{ video.title }}
-          </b-list-group-item>
-        </b-list-group>
-      </div>
+            :videoId="video.video_id"
+            :title="video.title"
+            :id="video.id"
+            :description="video.description"
+          />
+
     </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import VideoSummary from '@/components/VideoSummary.vue';
 
 export default {
+  components: [
+    VideoSummary
+  ],
   created() {
     axios.get('http://localhost:8080/videos').then(response => {
       this.videos = response.data.data;
