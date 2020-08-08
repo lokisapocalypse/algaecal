@@ -15,11 +15,6 @@
 import axios from 'axios';
 
 export default {
-  computed: {
-    videoLink() {
-      return '//fast.wistia.net/embed/iframe/' + this.videoId;
-    }
-  },
   created() {
     axios.get('http://fast.wistia.net/oembed?url=http://home.wistia.com/medias/' + this.videoId + '?embedType=async&videoWidth=300').then(response => {
       this.thumbnail = response.data.thumbnail_url;
